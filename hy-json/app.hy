@@ -4,7 +4,10 @@
 (setv app (Flask "__main__"))
 
 (defn [(.get app "/")] 
-	index [] "endpoints:<br>/hy - dados da linguagem")
+	index [] "endpoints:<br>
+	          /hy - dados da linguagem<br>
+		  /temperature/<city_name> - dados<br>
+		  /temperature/api/<city_name> - dados em JSON" )
 
 (defn [(.get app "/hy")] 
 	about [] { "linguagem" "Hy" "data-criacao" 2013 })
